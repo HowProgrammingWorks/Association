@@ -3,8 +3,8 @@
 const fs = require('fs');
 
 class Logger {
-  constructor() {
-    this.stream = fs.createWriteStream('file.log');
+  constructor(name) {
+    this.stream = fs.createWriteStream(name);
   }
 
   log(message) {
@@ -14,5 +14,5 @@ class Logger {
 
 // Usage
 
-const logger = new Logger();
+const logger = new Logger('file.log');
 logger.log('Here we are');
