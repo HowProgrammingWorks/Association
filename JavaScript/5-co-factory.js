@@ -4,7 +4,7 @@ const fs = require('fs');
 
 // Composition factory
 
-const loggerFactory = name => {
+const loggerFactory = (name) => {
   const stream = fs.createWriteStream(name);
 
   return {

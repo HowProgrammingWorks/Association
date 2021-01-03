@@ -1,6 +1,6 @@
 'use strict';
 
-const logger = stream => message => stream.write(message + '\n');
+const logger = (stream) => (message) => stream.write(message + '\n');
 
 // Usage
 

@@ -33,7 +33,7 @@ class Application extends EventEmitter {
 
 const chat = new Application('Chat');
 
-chat.on('channel', name => {
+chat.on('channel', (name) => {
   console.log(`Channel ${name} created`);
 });
 

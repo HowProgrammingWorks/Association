@@ -2,7 +2,7 @@
 
 // Aggregation factory
 
-const loggerFactory = stream => ({
+const loggerFactory = (stream) => ({
   log(message) {
     stream.write(message + '\n');
   }

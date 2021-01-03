@@ -33,7 +33,7 @@ class Application {
 
 const chat = new Application('Chat');
 
-chat.events.on('channel', name => {
+chat.events.on('channel', (name) => {
   console.log(`Channel ${name} created`);
 });
 
