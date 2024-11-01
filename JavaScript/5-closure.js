@@ -2,7 +2,7 @@
 
 const fs = require('node:fs');
 
-// Composition closure
+// Composition with closure
 
 const createLogger = (name) => {
   const stream = fs.createWriteStream(name);

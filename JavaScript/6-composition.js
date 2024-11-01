@@ -1,7 +1,7 @@
 'use strict';
 
 {
-  // Composition in closure
+  // Aggregation with closure
   const createLogger = (stream) => (message) => stream.write(message + '\n');
   const log = createLogger(process.stdout);
   log('Here we are');

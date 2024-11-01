@@ -1,6 +1,6 @@
 'use strict';
 
-// Aggregation closure
+// Aggregation with closure
 
 const createLogger = (stream) => ({
   log(message) {
