@@ -1,15 +1,15 @@
 'use strict';
 
-// Aggregation factory
+// Aggregation closure
 
-const loggerFactory = (stream) => ({
+const createLogger = (stream) => ({
   log(message) {
     stream.write(message + '\n');
-  }
+  },
 });
 
 // Usage
 
 const stream = process.stdout;
-const logger = loggerFactory(stream);
+const logger = createLogger(stream);
 logger.log('Here we are');

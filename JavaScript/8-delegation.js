@@ -11,7 +11,7 @@ class Channel {
 
   send(from, message) {
     this.histry.push({ from, message });
-    this.application.events.emit('message', this.name, from, message);
+    this.application.send(this.name, from, message);
   }
 }
 
@@ -19,6 +19,10 @@ class Application {
   constructor() {
     this.events = new EventEmitter();
     this.channels = {};
+  }
+
+  send(channel, from, message) {
+    this.events.emit('message', this.name, from, message);
   }
 
   createChannel(name) {
@@ -41,8 +45,8 @@ chat.events.on('message', (channel, from, message) => {
   console.log(`${from}@${channel}> ${message}`);
 });
 
-const hpw = chat.createChannel('HowProgrammingWorks');
+const channel = chat.createChannel('HowProgrammingWorks');
 
-hpw.send('Marcus', 'Hello there');
-hpw.send('Mao', 'Node.js macht frei!');
-hpw.send('Marcus', 'Fine');
+channel.send('Marcus', 'Hello there');
+channel.send('Mao', 'Node.js macht frei!');
+channel.send('Marcus', 'Fine');

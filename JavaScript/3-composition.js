@@ -14,5 +14,5 @@ class Logger {
 
 // Usage
 
-const logger = new Logger('file.log');
+const logger = new Logger('./file.log');
 logger.log('Here we are');

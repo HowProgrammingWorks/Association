@@ -37,12 +37,12 @@ chat.on('channel', (name) => {
   console.log(`Channel ${name} created`);
 });
 
-const hpw = chat.createChannel('HowProgrammingWorks');
+const channel = chat.createChannel('HowProgrammingWorks');
 
-hpw.on('message', (from, message) => {
+channel.on('message', (from, message) => {
   console.log(`${from}> ${message}`);
 });
 
-hpw.send('Marcus', 'Hello there');
-hpw.send('Mao', 'Node.js macht frei!');
-hpw.send('Marcus', 'Fine');
+channel.send('Marcus', 'Hello there');
+channel.send('Mao', 'Node.js macht frei!');
+channel.send('Marcus', 'Fine');

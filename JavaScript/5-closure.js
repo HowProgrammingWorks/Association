@@ -2,19 +2,19 @@
 
 const fs = require('node:fs');
 
-// Composition factory
+// Composition closure
 
-const loggerFactory = (name) => {
+const createLogger = (name) => {
   const stream = fs.createWriteStream(name);
 
   return {
     log(message) {
       stream.write(message + '\n');
-    }
+    },
   };
 };
 
 // Usage
 
-const logger = loggerFactory('file.log');
+const logger = createLogger('file.log');
 logger.log('Here we are');
