@@ -6,11 +6,11 @@ class Channel extends EventEmitter {
   constructor(name) {
     super();
     this.name = name;
-    this.histry = [];
+    this.history = [];
   }
 
   send(from, message) {
-    this.histry.push({ from, message });
+    this.history.push({ from, message });
     this.emit('message', from, message);
   }
 }
