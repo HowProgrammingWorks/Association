@@ -1,16 +1,10 @@
 class Point {
-  public x: number;
-  public y: number;
-
-  constructor(x: number, y: number) {
-    this.x = x;
-    this.y = y;
-  }
+  constructor(public x: number, public y: number) {}
 }
 
 class Line {
-  public a: Point;
-  public b: Point;
+  public a: Point | undefined;
+  public b: Point | undefined;
 
   get length() {
     const { a, b } = this;
